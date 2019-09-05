@@ -105,6 +105,9 @@
     if (![_subviews containsObject:viewXML]) {
         [_subviewsElement addChild:viewXML.xml];
         [_subviews addObject:viewXML];
+        
+        viewXML.x = @(viewXML.x.floatValue - self.x.floatValue).stringValue;
+        viewXML.y = @(viewXML.y.floatValue - self.y.floatValue).stringValue;
     }
 }
 

@@ -16,5 +16,7 @@
 
 @property (nonatomic, copy) NSString *image;
 
+@property (nonatomic, copy) NSString *pointSize;
+
 @end
 

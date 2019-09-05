@@ -30,6 +30,10 @@
     return xml;
 }
 
+- (NSString *)nodeName {
+    return @"tableView";
+}
+
 - (NSXMLNode *)multipleTouchEnabled {
     return nil;
 }
@@ -182,6 +186,10 @@
     _tableViewCellContentView.tableViewCell = self.uid;
     [xml addChild:_tableViewCellContentView.xml];
     return xml;
+}
+
+- (NSString *)nodeName {
+    return @"tableViewCell";
 }
 
 - (void)addSubviews:(JCViewXML *)viewXML {

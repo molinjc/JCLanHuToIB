@@ -57,6 +57,7 @@ static NSMutableArray<NSString *> *uids = nil;
 
 - (void)analysisXMLElement:(NSXMLElement *)xml {
     self.uid = [xml attributeForName:@"id"].stringValue;
+    [self getAllUid:xml];
 }
 
 - (NSXMLElement *)createXMLElement {
@@ -67,6 +68,14 @@ static NSMutableArray<NSString *> *uids = nil;
 
 - (NSString *)nodeName {
     return @"";
+}
+
+- (void)getAllUid:(NSXMLElement *)xml {
+    for (NSXMLElement *child in xml.children) {
+        NSXMLNode *node = [child attributeForName:@"id"];
+        if (node) { [[JCUID sharedInstance] addUid:node.stringValue]; }
+        if (child.children.count) { [self getAllUid:child]; }
+    }
 }
 
 @end

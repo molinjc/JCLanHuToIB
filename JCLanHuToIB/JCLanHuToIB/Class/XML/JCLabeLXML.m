@@ -88,6 +88,14 @@
         if ([familys containsObject:family]) {
             [self setupFamily:family FontName:model.font];
         }
+        
+        if (self.width.floatValue <= 2) {
+            self.x = model.x;
+            self.y = model.y;
+            self.width = model.width;
+            self.height = model.height;
+            if (model.opaque < 1) { self.alpha = @(1 - model.opaque).stringValue; }
+        }
     }
 }
 

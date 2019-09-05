@@ -68,6 +68,7 @@ static JCUID * _instance;
 }
 
 - (void)addUid:(NSString *)uid {
+    NSLog(@"%@", uid);
     if (![_allUIDs containsObject:uid]) {
         [_allUIDs addObject:uid];
     }

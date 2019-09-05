@@ -12,6 +12,10 @@
 #import "JCUIModelKit.h"
 
 #import "JCStoryboardXML.h"
+#import "JCTableViewControllerXML.h"
+#import "JCButtonXML.h"
+#import "JCImageViewXML.h"
+#import "JCTextFieldXML.h"
 
 @interface ViewController ()
 @property (weak) IBOutlet NSPopUpButton *haveControllerButton;
@@ -44,12 +48,6 @@
     thepath = [thepath stringByAppendingPathComponent:@"jcib.storyboard"];
 
     _sbXML = [[JCStoryboardXML alloc] initWithPaht:thepath];
-
-//    if ([[NSFileManager defaultManager] fileExistsAtPath:thepath]) {
-//        _sbModel = [JCStoryboardModel loadLocationStoryboard];
-//    } else {
-//        _sbModel = [JCStoryboardModel createStoryboard];
-//    }
 }
 
 - (void)updatecontrollerBox {
@@ -112,15 +110,26 @@
 
 - (void)handelWithModel:(JCNodeModel *)model {
     NSString *cls = self.onewViewBox.stringValue;
-    
+    JCViewXML *vm = nil;
     if ([cls isEqualToString:@"view"]) {
-        JCViewXML *vm = [[JCViewXML alloc] initWithXML:nil];
+        vm = [[JCViewXML alloc] initWithXML:nil];
+    } else if ([cls isEqualToString:@"label"]) {
+        vm = [[JCLabeLXML alloc] initWithXML:nil];
+    } else if ([cls isEqualToString:@"button"]) {
+        vm = [[JCButtonXML alloc] initWithXML:nil];
+    } else if ([cls isEqualToString:@"imageView"]) {
+        vm = [[JCImageViewXML alloc] initWithXML:nil];
+    } else if ([cls isEqualToString:@"TextField"]) {
+        vm = [[JCTextFieldXML alloc] initWithXML:nil];
+    } else if ([cls isEqualToString:@"tableView"]) {
+        vm = [[JCTableViewXML alloc] initWithXML:nil];
+    } else if ([cls isEqualToString:@"tableViewCell"]) {
+        vm = [[JCTableViewCellXML alloc] initWithXML:nil];
+    }
+    
+    if (vm) {
         [vm setupDatas:model];
         _viewXML = vm;
-    } else if ([cls isEqualToString:@"label"]) {
-        JCLabeLXML *lm = [[JCLabeLXML alloc] initWithXML:nil];
-        [lm setupDatas:model];
-        _viewXML = lm;
     }
     
     self.viewLabelView.stringValue = [NSString stringWithFormat:@"创建成功%@", _viewXML.uid];
@@ -128,6 +137,9 @@
 
 #pragma mark - Target Action
 
+- (IBAction)choiceViewControllerAction:(NSPopUpButton *)sender {
+    _viewControllerXML = _sbXML.viewControllers[sender.indexOfSelectedItem];
+}
 - (IBAction)backAction:(NSButton *)sender {
 }
 
@@ -138,8 +150,15 @@
     NSString *cls = self.newcontrollerBox.stringValue;
     NSString *title = self.titleField.stringValue;
     
+    JCViewControllerXML *vcm = nil;
     if ([cls isEqualToString:@"ViewController"]) {
-        JCViewControllerXML *vcm = [[JCViewControllerXML alloc] initWithXML:nil];
+        vcm = [[JCViewControllerXML alloc] initWithXML:nil];
+        
+    } else if ([cls isEqualToString:@"TableViewController"]) {
+        vcm = [[JCTableViewControllerXML alloc] initWithXML:nil];
+    }
+    
+    if (vcm) {
         if (title.length) { vcm.title = title; }
         [_sbXML addViewControllers:vcm];
         self.viewControllerXML = vcm;

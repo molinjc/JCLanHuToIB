@@ -8,6 +8,10 @@
 
 #import "JCTextFieldXML.h"
 
+@interface JCTextFieldXML ()
+@property (nonatomic, strong) NSXMLElement *fontElement;
+@end
+
 @implementation JCTextFieldXML
 
 - (NSXMLElement *)createXMLElement {
@@ -22,11 +26,18 @@
     [self addAttributeName:@"minimumFontSize" stringValue:@"17" inXML:xml];
     [self addAttributeName:@"text" stringValue:@"text" inXML:xml];
     [self addAttributeName:@"placeholder" stringValue:@"" inXML:xml];
+
     [xml addChild:[self xmlElementWithString:@"<textInputTraits key=\"textInputTraits\"/>"]];
-    
     return xml;
 }
 
+- (NSString *)nodeName {
+    return @"textField";
+}
+
+- (void)setupDatas:(JCNodeModel *)model {
+    [super setupDatas:model];
+}
 
 - (void)setPlaceholder:(NSString *)placeholder {
     [self.xml attributeForName:@"placeholder"].stringValue = placeholder;

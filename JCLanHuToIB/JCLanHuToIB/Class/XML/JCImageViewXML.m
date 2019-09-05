@@ -25,6 +25,11 @@
     return [NSXMLNode attributeWithName:@"contentMode" stringValue:@"scaleAspectFit"];
 }
 
+- (void)setupDatas:(JCNodeModel *)model {
+    [super setupDatas:model];
+    self.image = model.name;
+}
+
 - (void)setImage:(NSString *)image {
     NSXMLNode *node = [self.xml attributeForName:@"image"];
     if (!node) {
