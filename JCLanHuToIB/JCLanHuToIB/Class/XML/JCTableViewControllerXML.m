@@ -13,6 +13,10 @@
 - (NSXMLElement *)createXMLElement {
     NSXMLElement *xml = [super createXMLElement];
     [((JCTableViewXML *)self.viewXML) addDelegate:self.uid];
+    
+//    移除
+//    translatesAutoresizingMaskIntoConstraints
+    
     return xml;
 }
 

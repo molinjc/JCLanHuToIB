@@ -18,13 +18,7 @@
 		094577E0232090BA001583C3 /* JCTableViewXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 094577DF232090BA001583C3 /* JCTableViewXML.m */; };
 		094577E323209234001583C3 /* JCScrollViewXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 094577E223209234001583C3 /* JCScrollViewXML.m */; };
 		094577E6232098EC001583C3 /* JCTableViewControllerXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 094577E5232098EC001583C3 /* JCTableViewControllerXML.m */; };
-		09708A87231DFED500D4DFAF /* JCStoryboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09708A86231DFED500D4DFAF /* JCStoryboardModel.m */; };
 		09708A8A231E069A00D4DFAF /* sb.xml in Resources */ = {isa = PBXBuildFile; fileRef = 09708A89231E069A00D4DFAF /* sb.xml */; };
-		09708A90231E223000D4DFAF /* JCViewControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09708A8F231E223000D4DFAF /* JCViewControllerModel.m */; };
-		09708A94231E228900D4DFAF /* JCSBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09708A93231E228900D4DFAF /* JCSBModel.m */; };
-		09708A9D231E3DCE00D4DFAF /* JCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09708A9C231E3DCE00D4DFAF /* JCViewModel.m */; };
-		09708AA0231E415800D4DFAF /* JCColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09708A9F231E415800D4DFAF /* JCColorModel.m */; };
-		09708AA3231E484400D4DFAF /* JCLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09708AA2231E484400D4DFAF /* JCLabelModel.m */; };
 		099F056C231F75E0005464E4 /* JCBaseXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 099F056B231F75E0005464E4 /* JCBaseXML.m */; };
 		099F056F231F76F9005464E4 /* JCStoryboardXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 099F056E231F76F9005464E4 /* JCStoryboardXML.m */; };
 		09A89F70231FA09E00D67E38 /* JCUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A89F6F231FA09E00D67E38 /* JCUID.m */; };
@@ -64,19 +58,7 @@
 		094577E223209234001583C3 /* JCScrollViewXML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCScrollViewXML.m; sourceTree = "<group>"; };
 		094577E4232098EC001583C3 /* JCTableViewControllerXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCTableViewControllerXML.h; sourceTree = "<group>"; };
 		094577E5232098EC001583C3 /* JCTableViewControllerXML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCTableViewControllerXML.m; sourceTree = "<group>"; };
-		09708A85231DFED500D4DFAF /* JCStoryboardModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCStoryboardModel.h; sourceTree = "<group>"; };
-		09708A86231DFED500D4DFAF /* JCStoryboardModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCStoryboardModel.m; sourceTree = "<group>"; };
 		09708A89231E069A00D4DFAF /* sb.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sb.xml; sourceTree = "<group>"; };
-		09708A8E231E223000D4DFAF /* JCViewControllerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCViewControllerModel.h; sourceTree = "<group>"; };
-		09708A8F231E223000D4DFAF /* JCViewControllerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCViewControllerModel.m; sourceTree = "<group>"; };
-		09708A92231E228900D4DFAF /* JCSBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCSBModel.h; sourceTree = "<group>"; };
-		09708A93231E228900D4DFAF /* JCSBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCSBModel.m; sourceTree = "<group>"; };
-		09708A9B231E3DCE00D4DFAF /* JCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCViewModel.h; sourceTree = "<group>"; };
-		09708A9C231E3DCE00D4DFAF /* JCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCViewModel.m; sourceTree = "<group>"; };
-		09708A9E231E415800D4DFAF /* JCColorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCColorModel.h; sourceTree = "<group>"; };
-		09708A9F231E415800D4DFAF /* JCColorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCColorModel.m; sourceTree = "<group>"; };
-		09708AA1231E484400D4DFAF /* JCLabelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCLabelModel.h; sourceTree = "<group>"; };
-		09708AA2231E484400D4DFAF /* JCLabelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCLabelModel.m; sourceTree = "<group>"; };
 		099F056A231F75E0005464E4 /* JCBaseXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCBaseXML.h; sourceTree = "<group>"; };
 		099F056B231F75E0005464E4 /* JCBaseXML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCBaseXML.m; sourceTree = "<group>"; };
 		099F056D231F76F9005464E4 /* JCStoryboardXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCStoryboardXML.h; sourceTree = "<group>"; };
@@ -175,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				099F0569231F75CA005464E4 /* XML */,
-				09708A91231E227500D4DFAF /* Models */,
 				09708A88231E05AD00D4DFAF /* File */,
 				091E8E25231C9CCE00C8B09D /* Main.storyboard */,
 				091E8E20231C9CCD00C8B09D /* ViewController.h */,
@@ -211,25 +192,6 @@
 				09708A89231E069A00D4DFAF /* sb.xml */,
 			);
 			path = File;
-			sourceTree = "<group>";
-		};
-		09708A91231E227500D4DFAF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				09708A92231E228900D4DFAF /* JCSBModel.h */,
-				09708A93231E228900D4DFAF /* JCSBModel.m */,
-				09708A85231DFED500D4DFAF /* JCStoryboardModel.h */,
-				09708A86231DFED500D4DFAF /* JCStoryboardModel.m */,
-				09708A8E231E223000D4DFAF /* JCViewControllerModel.h */,
-				09708A8F231E223000D4DFAF /* JCViewControllerModel.m */,
-				09708A9B231E3DCE00D4DFAF /* JCViewModel.h */,
-				09708A9C231E3DCE00D4DFAF /* JCViewModel.m */,
-				09708A9E231E415800D4DFAF /* JCColorModel.h */,
-				09708A9F231E415800D4DFAF /* JCColorModel.m */,
-				09708AA1231E484400D4DFAF /* JCLabelModel.h */,
-				09708AA2231E484400D4DFAF /* JCLabelModel.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		099F0569231F75CA005464E4 /* XML */ = {
@@ -361,26 +323,20 @@
 				099F056F231F76F9005464E4 /* JCStoryboardXML.m in Sources */,
 				35EBAD14231D3F76009D659C /* NSObject+JCCoder.m in Sources */,
 				35EBAD17231D3F76009D659C /* JCUIArchivedObject.m in Sources */,
-				09708A9D231E3DCE00D4DFAF /* JCViewModel.m in Sources */,
 				09A89F76231FACCB00D67E38 /* JCColorXML.m in Sources */,
 				094577E6232098EC001583C3 /* JCTableViewControllerXML.m in Sources */,
 				35E7CEAA2320017200BAB233 /* JCTextFieldXML.m in Sources */,
-				09708A90231E223000D4DFAF /* JCViewControllerModel.m in Sources */,
 				35EBAD16231D3F76009D659C /* NSObject+JCModel.m in Sources */,
 				35EBAD06231D3E6E009D659C /* JCNodeModel.m in Sources */,
-				09708AA0231E415800D4DFAF /* JCColorModel.m in Sources */,
 				35EBAD13231D3F76009D659C /* JCClassInfo.m in Sources */,
 				09A89F70231FA09E00D67E38 /* JCUID.m in Sources */,
 				09A89F73231FA27800D67E38 /* JCViewXML.m in Sources */,
-				09708A87231DFED500D4DFAF /* JCStoryboardModel.m in Sources */,
 				091E8E22231C9CCD00C8B09D /* ViewController.m in Sources */,
 				091E8E2A231C9CCE00C8B09D /* main.m in Sources */,
 				09A89F79231FB41B00D67E38 /* JCLabeLXML.m in Sources */,
-				09708A94231E228900D4DFAF /* JCSBModel.m in Sources */,
 				35E7CEA4231FF0E900BAB233 /* JCButtonXML.m in Sources */,
 				09A89F7C231FBA3200D67E38 /* JCViewControllerXML.m in Sources */,
 				091E8E1F231C9CCD00C8B09D /* AppDelegate.m in Sources */,
-				09708AA3231E484400D4DFAF /* JCLabelModel.m in Sources */,
 				094577E323209234001583C3 /* JCScrollViewXML.m in Sources */,
 				091E8E59231CE15E00C8B09D /* JCCocoaPython.m in Sources */,
 				099F056C231F75E0005464E4 /* JCBaseXML.m in Sources */,
@@ -520,7 +476,7 @@
 				CODE_SIGN_ENTITLEMENTS = JCLanHuToIB/JCLanHuToIB.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VAF8WS6RGF;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = JCLanHuToIB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -539,7 +495,7 @@
 				CODE_SIGN_ENTITLEMENTS = JCLanHuToIB/JCLanHuToIB.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VAF8WS6RGF;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = JCLanHuToIB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

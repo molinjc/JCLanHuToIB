@@ -70,9 +70,6 @@
     for (JCViewXML *model in _viewControllerXML.allSubviews) {
         NSString *titles = [NSString stringWithFormat:@"%@-%@", model.xml.name, model.uid];
         if (![array containsObject:titles]) { [array addObject:titles]; }
-//        if (model.subviews.count) {
-//            [array addObjectsFromArray:[self subviewsFromModel:model]];
-//        }
     }
     [self.haveViewButton addItemsWithTitles:array];
 }
@@ -146,6 +143,8 @@
 - (IBAction)forwardAction:(id)sender {
 }
 
+#pragma mark - View Controller
+
 - (IBAction)onewControllerAction:(NSButton *)sender {
     NSString *cls = self.newcontrollerBox.stringValue;
     NSString *title = self.titleField.stringValue;
@@ -166,15 +165,6 @@
     }
 }
 
-- (IBAction)onewViewAction:(NSButton *)sender {
-//    NSString *doc = @"document.body.outerHTML";
-    NSString *doc = @"document.getElementsByClassName(\"annotation_container lanhu_scrollbar flag-ps\")[0].outerHTML";
-    [self.webView evaluateJavaScript:doc completionHandler:^(id htmlStr, NSError * error) {
-        if (error) { NSLog(@"JSError:%@",error); }
-        [self handleHtml: htmlStr newView:YES];
-    }];
-}
-
 - (void)handleHtml:(NSString *)html newView:(BOOL)isnew {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"h" ofType:@"py"];
     JCCocoaPython *python = [[JCCocoaPython alloc] initWithPath:path args:@[html]];
@@ -184,6 +174,14 @@
         else { [self.viewXML setupDatas:model]; }
     };
     [python runSync];
+}
+
+- (IBAction)onewViewAction:(NSButton *)sender {
+    NSString *doc = @"document.getElementsByClassName(\"annotation_container lanhu_scrollbar flag-ps\")[0].outerHTML";
+    [self.webView evaluateJavaScript:doc completionHandler:^(id htmlStr, NSError * error) {
+        if (error) { NSLog(@"JSError:%@",error); }
+        [self handleHtml: htmlStr newView:YES];
+    }];
 }
 
 - (IBAction)addToControllerAction:(NSButton *)sender {

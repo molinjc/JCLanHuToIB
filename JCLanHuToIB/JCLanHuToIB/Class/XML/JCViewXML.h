@@ -48,6 +48,8 @@
 
 - (NSXMLNode *)userInteractionEnabled;
 
+- (NSXMLElement *)autoresizingMask;
+
 @property (nonatomic, copy) NSString *key;
 
 @end

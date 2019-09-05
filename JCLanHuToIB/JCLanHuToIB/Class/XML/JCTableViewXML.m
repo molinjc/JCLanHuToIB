@@ -51,6 +51,7 @@
             _tableFooterViewXML.key = @"tableFooterView";
             [self.xml addChild:_tableFooterViewXML.xml];
         }
+        [self.subviews addObject:viewXML];
     }
 }
 
@@ -61,6 +62,7 @@
         [self.xml addChild:[NSXMLElement elementWithName:@"sections"]];
     }
     [_prototypesElement addChild:cell.xml];
+    [self.subviews addObject:cell];
 }
 
 - (void)addDelegate:(NSString *)dalegateUid {
@@ -129,6 +131,10 @@
     return @"tableViewCellContentView";
 }
 
+- (NSXMLNode *)translatesAutoresizingMaskIntoConstraints {
+    return nil;
+}
+
 - (NSXMLNode *)contentMode {
     return [NSXMLNode attributeWithName:@"contentMode" stringValue:@"center"];
 }
@@ -173,15 +179,10 @@
 
 - (NSXMLElement *)createXMLElement {
     NSXMLElement *xml = [super createXMLElement];
-    [self addAttributeName:@"alwaysBounceVertical" stringValue:@"YES" inXML:xml];
-    [self addAttributeName:@"dataMode" stringValue:@"prototypes" inXML:xml];
-    [self addAttributeName:@"style" stringValue:@"plain" inXML:xml];
-    [self addAttributeName:@"separatorStyle" stringValue:@"default" inXML:xml];
-    [self addAttributeName:@"separatorStyle" stringValue:@"default" inXML:xml];
-    [self addAttributeName:@"rowHeight" stringValue:@"-1" inXML:xml];
-    [self addAttributeName:@"estimatedRowHeight" stringValue:@"-1" inXML:xml];
-    [self addAttributeName:@"sectionHeaderHeight" stringValue:@"28" inXML:xml];
-    [self addAttributeName:@"sectionFooterHeight" stringValue:@"28" inXML:xml];
+    [self addAttributeName:@"clipsSubviews" stringValue:@"YES" inXML:xml];
+    [self addAttributeName:@"preservesSuperviewLayoutMargins" stringValue:@"YES" inXML:xml];
+    [self addAttributeName:@"selectionStyle" stringValue:@"default" inXML:xml];
+    [self addAttributeName:@"indentationWidth" stringValue:@"10" inXML:xml];    
     _tableViewCellContentView = [[JCTableViewCellContentViewXML alloc] init];
     _tableViewCellContentView.tableViewCell = self.uid;
     [xml addChild:_tableViewCellContentView.xml];
@@ -190,6 +191,14 @@
 
 - (NSString *)nodeName {
     return @"tableViewCell";
+}
+
+- (NSXMLElement *)autoresizingMask {
+    return [self xmlElementWithString:@"<autoresizingMask key=\"autoresizingMask\"/>"];
+}
+
+- (NSXMLNode *)translatesAutoresizingMaskIntoConstraints {
+    return nil;
 }
 
 - (void)addSubviews:(JCViewXML *)viewXML {

@@ -40,10 +40,10 @@
     NSXMLElement *xml = [super createXMLElement];
     [xml addAttribute:[self contentMode]];
     [xml addAttribute:[self fixedFrame]];
-    [xml addAttribute:[self translatesAutoresizingMaskIntoConstraints]];
+    
     _rectElement = [self xmlElementWithString:@"<rect key=\"frame\" x=\"0.0\" y=\"0.0\" width=\"0.0\" height=\"0.0\"/>"];
     [xml addChild:_rectElement];
-    [xml addChild:[self xmlElementWithString:@"<autoresizingMask key=\"autoresizingMask\" flexibleMaxX=\"YES\" flexibleMaxY=\"YES\"/>"]];
+    [xml addChild:[self autoresizingMask]];
     _backgroundColor = [JCColorXML backgroundColor];
     [xml addChild:_backgroundColor.xml];
     
@@ -52,11 +52,19 @@
     
     node = [self userInteractionEnabled];
     if (node) { [xml addAttribute:node]; }
+    
+    node = [self translatesAutoresizingMaskIntoConstraints];
+    if (node) { [xml addAttribute:node]; }
+    
     return xml;
 }
 
 - (NSString *)nodeName {
     return @"view";
+}
+
+- (NSXMLElement *)autoresizingMask {
+    return [self xmlElementWithString:@"<autoresizingMask key=\"autoresizingMask\" flexibleMaxX=\"YES\" flexibleMaxY=\"YES\"/>"];
 }
 
 - (NSXMLNode *)contentMode {
